@@ -1,12 +1,12 @@
 === ARYO Activity Log ===
 Contributors: kingyes, maor, arielk-1
-Tags: activity, logging, logger, user control
+Tags: activity, logging, logger, user
 Requires at least: 3.5
 Tested up to: 3.5.1
-Stable tag: trunk
+Stable tag: 1.0
 License: GPLv2 or later
 
-Get aware of any activities that are taking place on your dashboard! Imagine it's a black-box for your WordPress site.
+Get aware of any activities that are taking place on your dashboard! Imagine it like a black-box for your WordPress site.
 
 == Description ==
 
@@ -19,6 +19,7 @@ If you have tens of users or more, you really can’t know who did it. This plug
 
 
 Users
+
 * A user logs in
 * A user logs out
 * A login has failed due to incorrect credentials
@@ -27,24 +28,29 @@ Users
 * An existing user account is being deleted
 
 Plugins
+
 * A plugin is being activated
 * A plugin is being deactivated
 
 Themes
+
 * A theme is being changed
 
 Content
+
 * A new post is being created
 * A post is being updated
 * A post changes status (draft, pending review, publish)
 * A post is being deleted
 
 Media
+
 * An attachment is being uploaded
 * An attachment is being edited
 * An attachment is being deleted
 
 Widgets
+
 * A widget is being added to a sidebar
 
 
