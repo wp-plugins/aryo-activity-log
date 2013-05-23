@@ -1,5 +1,5 @@
 === ARYO Activity Log ===
-Contributors: kingyes, maor, arielk-1
+Contributors: kingyes, arielk-1, maor
 Tags: activity, logging, logger, user
 Requires at least: 3.5
 Tested up to: 3.5.1
