@@ -1,9 +1,10 @@
 === ARYO Activity Log ===
+Contributors: kingyes, maor, arielk-1
 Tags: activity, logging, logger, user control
 Requires at least: 3.5
 Tested up to: 3.5.1
 Stable tag: trunk
-Contributors: kingyes, maor, arielk-1
+License: GPLv2 or later
 
 Get aware of any activities that are taking place on your dashboard! Imagine it's a black-box for your WordPress site.
 
