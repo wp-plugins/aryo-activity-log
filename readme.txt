@@ -1,5 +1,5 @@
 === ARYO Activity Log ===
-Contributors: KingYes, arielk-1, maor
+Contributors: KingYes, ArielK, maor
 Tags: activity, logging, logger, user, madeinisrael
 Requires at least: 3.5
 Tested up to: 3.5.1
@@ -57,6 +57,11 @@ Widgets
 The plugin does not require any kind of setup. It works out of the box (and that’s why we love it too).
 
 We’re planning to add a lot more features in the upcoming releases. If you think we’re missing something big time, please post your suggestions in the plugin’s forum.
+
+<strong>Contributions:</strong><br />
+
+Would you like to like to cotribute to Activity Log? You are more than welcome to submit your pull requests on the [GitHub repo](https://github.com/KingYes/wordpress-aryo-activity-log). Also, if you have any notes about the code, please open a ticket on ths issue tracker.
+
 
 == Installation ==
 
