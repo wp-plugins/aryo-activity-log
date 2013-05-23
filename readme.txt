@@ -1,5 +1,5 @@
 === ARYO Activity Log ===
-Contributors: KingYes, ArielK-1, maor
+Contributors: KingYes, ArielK, maor
 Tags: activity, logging, logger, user, madeinisrael
 Requires at least: 3.5
 Tested up to: 3.5.1
