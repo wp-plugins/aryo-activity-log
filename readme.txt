@@ -1,9 +1,9 @@
 === ARYO Activity Log ===
-Contributors: KingYes, ariel.k, maor
-Tags: activity, logging, logger, user, madeinisrael
+Contributors: KingYes, Ariel.K, maor
+Tags: admin, administration, activity, multisite, logging, logger, login, tracking, user, madeinisrael
 Requires at least: 3.5
 Tested up to: 3.5.1
-Stable tag: 1.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 
 Get aware of any activities that are taking place on your dashboard! Imagine it like a black-box for your WordPress site.
@@ -31,10 +31,11 @@ Plugins
 
 * A plugin is being activated
 * A plugin is being deactivated
+* A plugin is being changed
 
 Themes
 
-* A theme is being changed
+* A theme is being changed (Editor and Customizer)
 
 Content
 
@@ -52,7 +53,12 @@ Media
 Widgets
 
 * A widget is being added to a sidebar
+* A widget is being deleted from a sidebar
 
+
+<strong>__Translators:</strong><br />
+Hebrew (he_IL) - ARYO Digital
+German (de_DE) - Robert Harm
 
 The plugin does not require any kind of setup. It works out of the box (and that’s why we love it too).
 
@@ -87,6 +93,15 @@ Would you like to like to cotribute to Activity Log? You are more than welcome t
 
 
 == Changelog ==
+
+= 1.0.1 =
+* Added translate: German (de_DE) - Thanks to [Robert Harm](http://www.mapsmarker.com/)
+* Added translate: Hebrew (he_IL)
+* Plugin name instead of file name on activation/deactivation
+* <strong>New Hooks:</strong>
+* A widget is being deleted from a sidebar
+* A plugin is being changed
+* Theme Customizer (Thanks to Ohad Raz)
 
 = 1.0 =
 * Blastoff!

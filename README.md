@@ -1,4 +1,4 @@
-WordPress ARYO Activity Log
+[WordPress ARYO Activity Log](http://wordpress.org/plugins/aryo-activity-log/)
 ===============
 
 Get aware of the activities that are taking place on your dashboard! Weather a post was deleted or a plugin was activated, it’s all there for you to see.
@@ -15,15 +15,16 @@ Users
 * A user logs out
 * A login has failed due to incorrect credentials
 * A user updates their profile
-* A new user account is being registerd
+* A new user account is being registered
 * An existing user account is being deleted
 
 Plugins
 * A plugin is being activated
 * A plugin is being deactivated
+* A plugin is being changed
 
 Themes
-* A theme is being changed
+* A theme is being changed (Editor and Customizer)
 
 Content
 * A new post is being created
@@ -38,6 +39,14 @@ Media
 
 Widgets
 * A widget is being added to a sidebar
+* A widget is being deleted from a sidebar
+
+
+__Translators:__
+
+* German (de_DE) - [Robert Harm](http://www.mapsmarker.com/)
+* Hebrew (he_IL) - [ARYO Digital](http://www.aryodigital.com/)
+
 
 
 The plugin does not require any kind of setup. It works out of the box (and that’s why we love it too).
@@ -57,3 +66,4 @@ Here are some screenshots of this awesome plugin.
 
 ![Main Panel](https://raw.github.com/KingYes/wordpress-aryo-activity-log/master/screenshot-1.jpg)
 ![Settings Page](https://raw.github.com/KingYes/wordpress-aryo-activity-log/master/screenshot-2.jpg)
+![Settings Page](https://raw.github.com/KingYes/wordpress-aryo-activity-log/master/screenshot-3.jpg)
