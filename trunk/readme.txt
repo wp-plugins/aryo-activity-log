@@ -3,7 +3,7 @@ Contributors: KingYes, ariel.k, maor
 Tags: access, admin, administration, activity, community, event, monitor, multisite, multi-users, log, logging, logger, login, network, stats, security, tracking, user, madeinisrael
 Requires at least: 3.5
 Tested up to: 3.5.1
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 
 Get aware of any activities that are taking place on your dashboard! Imagine it like a black-box for your WordPress site.
@@ -55,6 +55,14 @@ Widgets
 * A widget is being added to a sidebar
 * A widget is being deleted from a sidebar
 
+Options
+
+* A option is being updated (can be extend by east filter).
+
+Menu
+
+* A menu is being updated.
+
 
 <strong>Translators:</strong>
 
@@ -94,6 +102,12 @@ Would you like to like to cotribute to Activity Log? You are more than welcome t
 
 
 == Changelog ==
+
+= 1.0.3 =
+* Added Multisite compatibility.
+* Added Options hooks (limit list, you can extend by simple filter).
+* Added Menu hooks.
+* Tweak - Ensure no duplicate logs.. 
 
 = 1.0.2 =
 * Forget remove old .pot file
