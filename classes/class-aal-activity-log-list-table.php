@@ -44,6 +44,10 @@ class AAL_Activity_Log_List_Table extends WP_List_Table {
 			}
 		}
 
+		// TODO: Find better way to Multisite compatibility.
+		if ( is_super_admin() )
+			$allow_caps = $this->_caps['administrator'];
+
 		if ( empty( $allow_caps ) )
 			wp_die( 'No allowed here.' );
 
@@ -55,12 +59,12 @@ class AAL_Activity_Log_List_Table extends WP_List_Table {
 	}
 	
 	public function __construct() {
-		$this->_roles = array(
+		$this->_roles = apply_filters( 'aal_init_roles', array(
 			// admin
-			'manage_options' => array( 'Post', 'User', 'Options', 'Attachment', 'Plugin', 'Widget', 'Theme' ),
+			'manage_options' => array( 'Post', 'User', 'Options', 'Attachment', 'Plugin', 'Widget', 'Theme', 'Menu' ),
 			// editor
 			'edit_pages'     => array( 'Post', 'Attachment' ),
-		);
+		) );
 
 		$this->_caps = array(
 			'administrator' => array( 'administrator', 'editor', 'author', 'guest' ),
