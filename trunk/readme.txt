@@ -1,9 +1,9 @@
 === ARYO Activity Log ===
-Contributors: KingYes, Ariel.K, maor
-Tags: admin, administration, activity, multisite, logging, logger, login, tracking, user, madeinisrael
+Contributors: KingYes, ariel.k, maor
+Tags: access, admin, administration, activity, community, event, monitor, multisite, multi-users, log, logging, logger, login, network, stats, security, tracking, user, madeinisrael
 Requires at least: 3.5
 Tested up to: 3.5.1
-Stable tag: 1.0.2
+Stable tag: 1.0.4
 License: GPLv2 or later
 
 Get aware of any activities that are taking place on your dashboard! Imagine it like a black-box for your WordPress site.
@@ -20,45 +20,60 @@ If you have tens of users or more, you really can’t know who did it. This plug
 
 Users
 
-* A user logs in
-* A user logs out
-* A login has failed due to incorrect credentials
-* A user updates their profile
-* A new user account is being registerd
-* An existing user account is being deleted
+* A user logs in.
+* A user logs out.
+* A login has failed due to incorrect credentials.
+* A user updates their profile.
+* A new user account is being registered.
+* An existing user account is being deleted.
 
 Plugins
 
-* A plugin is being activated
-* A plugin is being deactivated
-* A plugin is being changed
+* A plugin is being activated.
+* A plugin is being deactivated.
+* A plugin is being changed.
 
 Themes
 
-* A theme is being changed (Editor and Customizer)
+* A theme is being changed (Editor and Customizer).
 
 Content
 
-* A new post is being created
-* A post is being updated
-* A post changes status (draft, pending review, publish)
-* A post is being deleted
+* A new post is being created.
+* A post is being updated.
+* A post changes status (draft, pending review, publish).
+* A post is being deleted.
 
 Media
 
-* An attachment is being uploaded
-* An attachment is being edited
-* An attachment is being deleted
+* An attachment is being uploaded.
+* An attachment is being edited.
+* An attachment is being deleted.
 
 Widgets
 
-* A widget is being added to a sidebar
-* A widget is being deleted from a sidebar
+* A widget is being added to a sidebar.
+* A widget is being deleted from a sidebar.
+
+Options
+
+* A option is being updated (can be extend by east filter).
+
+Menu
+
+* A menu is being updated.
+
+Taxonomy
+
+* An term is being created.
+* An term is being edited.
+* An term is being deleted.
 
 
-<strong>__Translators:</strong><br />
-Hebrew (he_IL) - ARYO Digital
-German (de_DE) - Robert Harm
+<strong>Translators:</strong>
+
+* German (de_DE) - [Robert Harm](http://www.mapsmarker.com/)
+* Hebrew (he_IL) - ARYO Digital
 
 The plugin does not require any kind of setup. It works out of the box (and that’s why we love it too).
 
@@ -93,6 +108,15 @@ Would you like to like to cotribute to Activity Log? You are more than welcome t
 
 
 == Changelog ==
+
+= 1.0.4 =
+* Added Taxonomy type (created, updated, deleted).
+
+= 1.0.3 =
+* Added Multisite compatibility.
+* Added Options hooks (limit list, you can extend by simple filter).
+* Added Menu hooks.
+* Tweak - Ensure no duplicate logs.. 
 
 = 1.0.2 =
 * Forget remove old .pot file

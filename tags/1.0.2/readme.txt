@@ -1,6 +1,6 @@
 === ARYO Activity Log ===
-Contributors: KingYes, Ariel.K, maor
-Tags: admin, administration, activity, multisite, logging, logger, login, tracking, user, madeinisrael
+Contributors: KingYes, ariel.k, maor
+Tags: access, admin, administration, activity, community, event, monitor, multisite, multi-users, log, logging, logger, login, network, stats, security, tracking, user, madeinisrael
 Requires at least: 3.5
 Tested up to: 3.5.1
 Stable tag: 1.0.2
@@ -56,9 +56,10 @@ Widgets
 * A widget is being deleted from a sidebar
 
 
-<strong>__Translators:</strong><br />
-Hebrew (he_IL) - ARYO Digital
-German (de_DE) - Robert Harm
+<strong>Translators:</strong>
+
+* German (de_DE) - [Robert Harm](http://www.mapsmarker.com/)
+* Hebrew (he_IL) - ARYO Digital
 
 The plugin does not require any kind of setup. It works out of the box (and that’s why we love it too).
 

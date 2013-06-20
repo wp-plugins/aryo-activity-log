@@ -3,11 +3,67 @@
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 class AAL_Maintenance {
-	
-	public static function activate() {
+
+	public static function activate( $network_wide ) {
 		global $wpdb;
 
-		$sql = "CREATE TABLE IF NOT EXISTS `{$wpdb->activity_log}` (
+		if ( function_exists( 'is_multisite') && is_multisite() && $network_wide ) {
+			$old_blog_id = $wpdb->blogid;
+
+			$blog_ids = $wpdb->get_col( "SELECT blog_id FROM $wpdb->blogs" );
+			foreach ( $blog_ids as $blog_id ) {
+				switch_to_blog( $blog_id );
+				self::_create_tables();
+			}
+
+			switch_to_blog( $old_blog_id );
+		} else {
+			self::_create_tables();
+		}
+	}
+
+	public static function uninstall( $network_deactivating ) {
+		global $wpdb;
+
+		if ( function_exists( 'is_multisite') && is_multisite() && $network_deactivating ) {
+			$old_blog_id = $wpdb->blogid;
+
+			$blog_ids = $wpdb->get_col( "SELECT blog_id FROM $wpdb->blogs;" );
+			foreach ( $blog_ids as $blog_id ) {
+				switch_to_blog( $blog_id );
+				self::_remove_tables();
+			}
+
+			switch_to_blog( $old_blog_id );
+		} else {
+			self::_remove_tables();
+		}
+	}
+
+	public static function mu_new_blog_installer( $blog_id, $user_id, $domain, $path, $site_id, $meta ) {
+		global $wpdb;
+
+		if ( is_plugin_active_for_network( ACTIVITY_LOG_BASE ) ) {
+			$old_blog_id = $wpdb->blogid;
+			switch_to_blog( $blog_id );
+			self::_create_tables();
+			switch_to_blog( $old_blog_id );
+		}
+	}
+
+	public static function mu_delete_blog( $blog_id, $drop ) {
+		global $wpdb;
+
+		$old_blog_id = $wpdb->blogid;
+		switch_to_blog( $blog_id );
+		self::_remove_tables();
+		switch_to_blog( $old_blog_id );
+	}
+
+	protected static function _create_tables() {
+		global $wpdb;
+
+		$sql = "CREATE TABLE IF NOT EXISTS `{$wpdb->prefix}aryo_activity_log` (
 					  `histid` int(11) NOT NULL AUTO_INCREMENT,
 					  `user_caps` varchar(70) NOT NULL DEFAULT 'guest',
 					  `action` varchar(255) NOT NULL,
@@ -23,14 +79,14 @@ class AAL_Maintenance {
 
 		require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
 		dbDelta( $sql );
-		
+
 		update_option( 'activity_log_db_version', '1.0' );
 	}
 
-	public static function uninstall() {
+	protected static function _remove_tables() {
 		global $wpdb;
 
-		$wpdb->query( "DROP TABLE IF EXISTS $wpdb->activity_log" );
+		$wpdb->query( "DROP TABLE IF EXISTS `{$wpdb->prefix}aryo_activity_log`;" );
 
 		delete_option( 'activity_log_db_version' );
 	}
@@ -38,3 +94,8 @@ class AAL_Maintenance {
 
 register_activation_hook( ACTIVITY_LOG_BASE, array( 'AAL_Maintenance', 'activate' ) );
 register_uninstall_hook( ACTIVITY_LOG_BASE, array( 'AAL_Maintenance', 'uninstall' ) );
+
+// MU installer for new blog.
+add_action( 'wpmu_new_blog', array( 'AAL_Maintenance', 'mu_new_blog_installer' ), 10, 6 );
+// MU Uninstall for delete blog.
+add_action( 'delete_blog', array( 'AAL_Maintenance', 'mu_delete_blog' ), 10, 2 );

@@ -55,7 +55,14 @@ class AAL_Hooks {
 		
 		// Options
 		add_action( 'updated_option', array( &$this, 'hooks_updated_option' ), 10, 3 );
-
+		
+		// Menu
+		add_action( 'wp_update_nav_menu', array( &$this, 'hooks_menu_updated' ) );
+		
+		// Taxonomy
+		add_action( 'created_term', array( &$this, 'hooks_created_edited_deleted_term' ), 10, 3 );
+		add_action( 'edited_term', array( &$this, 'hooks_created_edited_deleted_term' ), 10, 3 );
+		add_action( 'delete_term', array( &$this, 'hooks_created_edited_deleted_term' ), 10, 4 );
 	}
 
 	public function admin_init() {
@@ -179,6 +186,10 @@ class AAL_Hooks {
 		}
 
 		if ( wp_is_post_revision( $post->ID ) )
+			return;
+		
+		// Skip for menu items.
+		if ( 'nav_menu_item' === get_post_type( $post->ID ) )
 			return;
 		
 		aal_insert_log( array(
@@ -332,6 +343,42 @@ class AAL_Hooks {
 			'object_type'    => 'Options',
 			'object_name'    => $option,
 		) );
+	}
+	
+	public function hooks_menu_updated( $nav_menu_selected_id ) {
+		if ( $menu_object = wp_get_nav_menu_object( $nav_menu_selected_id ) ) {
+			aal_insert_log( array(
+				'action'         => 'updated',
+				'object_type'    => 'Menu',
+				'object_name'    => $menu_object->name,
+			) );
+		}
+	}
+	
+	public function hooks_created_edited_deleted_term( $term_id, $tt_id, $taxonomy, $deleted_term = null ) {
+		if ( 'delete_term' === current_filter() )
+			$term = $deleted_term;
+		else
+			$term = get_term( $term_id, $taxonomy );
+
+		if ( $term && ! is_wp_error( $term ) ) {
+			if ( 'edited_term' === current_filter() ) {
+				$action = 'updated';
+			} elseif ( 'delete_term' === current_filter() ) {
+				$action  = 'deleted';
+				$term_id = '';
+			} else {
+				$action = 'created';
+			}
+
+			aal_insert_log( array(
+				'action'         => $action,
+				'object_type'    => 'Taxonomy',
+				'object_subtype' => $taxonomy,
+				'object_id'      => $term_id,
+				'object_name'    => $term->name,
+			) );
+		}
 	}
 
 	public function __construct() {

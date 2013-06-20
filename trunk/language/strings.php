@@ -26,3 +26,9 @@ __( 'Widget', 'aryo-aal' );
 
 // Options
 __( 'Options', 'aryo-aal' );
+
+// Menu
+__( 'Menu', 'aryo-aal' );
+
+// Taxonomy
+__( 'Taxonomy', 'aryo-aal' );
