@@ -6,8 +6,7 @@ Tested up to: 3.5.1
 Stable tag: 1.0
 License: GPLv2 or later
 
-Allows to easily control the display of widgets (Visible/Hidden) by the specific device: Desktop, Tablet, Phone (Mobile).
-This is especially useful for responsive websites.
+Allows to easily control the display of widgets (Visible/Hidden) by the specific device: Desktop, Tablet, Mobile.
 
 
 == Description ==
