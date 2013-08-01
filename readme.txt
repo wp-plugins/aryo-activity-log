@@ -20,6 +20,12 @@ ARYO Device Widget plugin will save you time encode and write code, and leave yo
 
 By default plugin defines all the current widget "Show on all devices", so all the widgets are always displayed. You can check the effective plugin By: Reducing / Expanding your browser window.
 
+
+<strong>Contributions:</strong><br />
+
+Would you like to like to cotribute to Device Widget? You are more than welcome to submit your pull requests on the [GitHub repo](https://github.com/KingYes/wordpress-aryo-device-widget). Also, if you have any notes about the code, please open a ticket on ths issue tracker.
+
+
 == Installation ==
 
 1. Upload plugin files to your plugins folder, or install using WordPress' built-in Add New Plugin installer
