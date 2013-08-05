@@ -1,9 +1,10 @@
 <?php
 /*
 Plugin Name: ARYO Widget Device
-Description: desc soon
+Plugin URI: http://wordpress.org/plugins/aryo-widget-device/
+Description: Allows to easily control the display of widgets (Visible/Hidden) by the specific device: Desktop, Tablet, Mobile.
 Author: Yakir Sitbon, Ariel Klikstein
-Version: 1.0
+Version: 1.0.1
 Author URI: http://www.aryodigital.com
 License: GPLv2 or later
 
@@ -30,9 +31,15 @@ define( 'WIDGET_DEVICE_BASE', plugin_basename( __FILE__ ) );
 include( 'classes/class-awd-widget-ui.php' );
 
 class AWD_Main {
+
+	public function load_textdomain() {
+		load_plugin_textdomain( 'aryo-awd', false, basename( dirname( __FILE__ ) ) . '/language' );
+	}
 	
 	public function __construct() {
 		new AWD_Widget_UI();
+
+		add_action( 'plugins_loaded', array( &$this, 'load_textdomain' ) );
 	}
 	
 }
