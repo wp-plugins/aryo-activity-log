@@ -3,7 +3,7 @@ Contributors: KingYes, ariel.k
 Tags: admin, content, hide, plugin, show, sidebar, widget, widget display, widgets, wordpress, device, desktop, tablet, mobile, phone, responsive, madeinisrael,
 Requires at least: 3.5
 Tested up to: 3.5.1
-Stable tag: 1.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 
 Allows to easily control the display of widgets (Visible/Hidden) by the specific device: Desktop, Tablet, Mobile.
