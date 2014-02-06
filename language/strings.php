@@ -1,4 +1,6 @@
 <?php
+__( 'ARYO Activity Log', 'aryo-aal' );
+__( 'Get aware of any activities that are taking place on your dashboard! Imagine it like a black-box for your WordPress site. e.g. post was deleted, plugin was activated, user logged in or logged out - it’s all these for you to see.', 'aryo-aal' );
 
 // Post
 __( 'Post', 'aryo-aal' );
@@ -20,6 +22,10 @@ __( 'wrong_password', 'aryo-aal' );
 __( 'Plugin', 'aryo-aal' );
 __( 'activated', 'aryo-aal' );
 __( 'deactivated', 'aryo-aal' );
+
+// Theme
+__( 'Theme', 'aryo-aal' );
+__( 'Theme Customizer', 'aryo-aal' );
 
 // Widget
 __( 'Widget', 'aryo-aal' );

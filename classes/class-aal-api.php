@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 class AAL_API {
 
-	protected function _delete_old_items() {
+	protected static function _delete_old_items() {
 		global $wpdb;
 		
 		$logs_lifespan = absint( AAL_Settings::get_option( 'logs_lifespan' ) );
@@ -16,6 +16,15 @@ class AAL_API {
 				WHERE `hist_time` < %2$d',
 			$wpdb->activity_log,
 			strtotime( '-' . $logs_lifespan . ' days', current_time( 'timestamp' ) )
+		) );
+	}
+	
+	public static function erase_all_items() {
+		global $wpdb;
+		
+		$wpdb->query( $wpdb->prepare(
+			'TRUNCATE %1$s',
+			$wpdb->activity_log
 		) );
 	}
 
