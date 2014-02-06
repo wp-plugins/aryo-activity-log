@@ -18,8 +18,12 @@ class AAL_Settings {
 	}
 	
 	public function plugin_action_links( $links ) {
-		$settings_link = sprintf( '<a href="%s">%s</a>', admin_url( 'options-general.php?page=activity-log-settings' ), __( 'Settings', 'aryo-aal' ) );
+		$settings_link = sprintf( '<a href="%s" target="_blank">%s</a>', 'https://github.com/KingYes/wordpress-aryo-activity-log', __( 'GitHub', 'aryo-aal' ) );
 		array_unshift( $links, $settings_link );
+		
+		$settings_link = sprintf( '<a href="%s">%s</a>', admin_url( 'admin.php?page=activity-log-settings' ), __( 'Settings', 'aryo-aal' ) );
+		array_unshift( $links, $settings_link );
+		
 		return $links;
 	}
 
@@ -73,20 +77,22 @@ class AAL_Settings {
 			)
 		);
 		
-		add_settings_field(
-			'raw_delete_log_activities',
-			__( 'Delete Log Activities', 'aryo-aal' ),
-			array( 'AAL_Settings_Fields', 'raw_html' ),
-			$this->slug,
-			'general_settings_section',
-			array(
-				'html' => sprintf( __( '<a href="%s" id="%s">Reset Database</a>', 'aryo-aal' ), add_query_arg( array(
-						'action' => 'aal_reset_stream',
-						'_nonce' => wp_create_nonce( 'aal_reset_stream' ),
-					), admin_url( 'admin-ajax.php' ) ), 'aal-delete-log-activities' ),
-				'desc' => __( 'Warning: Clicking this will delete all activities from the database.', 'aryo-aal' ),
-			)
-		);
+		if ( apply_filters( 'aal_allow_option_erase_logs', true ) ) {
+			add_settings_field(
+				'raw_delete_log_activities',
+				__( 'Delete Log Activities', 'aryo-aal' ),
+				array( 'AAL_Settings_Fields', 'raw_html' ),
+				$this->slug,
+				'general_settings_section',
+				array(
+					'html' => sprintf( __( '<a href="%s" id="%s">Reset Database</a>', 'aryo-aal' ), add_query_arg( array(
+							'action' => 'aal_reset_stream',
+							'_nonce' => wp_create_nonce( 'aal_reset_stream' ),
+						), admin_url( 'admin-ajax.php' ) ), 'aal-delete-log-activities' ),
+					'desc' => __( 'Warning: Clicking this will delete all activities from the database.', 'aryo-aal' ),
+				)
+			);
+		}
 		
 		register_setting( 'aal-options', $this->slug );
 	}
