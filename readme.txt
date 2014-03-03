@@ -3,7 +3,7 @@ Contributors: KingYes, ariel.k, maor
 Tags: access, administration, activity, community, event, monitor, multisite, multi-users, log, logger, login, network, stats, security, tracking, madeinisrael, woocommerce
 Requires at least: 3.5
 Tested up to: 3.8.1
-Stable tag: 2.0.4
+Stable tag: 2.0.5
 License: GPLv2 or later
 
 Get aware of any activities that are taking place on your dashboard! Imagine it like a black-box for your WordPress site.
@@ -45,6 +45,7 @@ If you have tens of users or more, you really can’t know who did it. This plug
 * Serbo-Croatian (sr_RS) - [Borisa Djuraskovic](http://www.webhostinghub.com/)
 * Danish (da_DK) - [Morten Dalgaard Johansen](http://www.iosoftgame.com/)
 * Hebrew (he_IL) + RTL Support - [ARYO Digital](http://www.aryodigital.com/)
+* Armenia (hy_AM) - Hayk Jomardyan
 
 The plugin does not require any kind of setup. It works out of the box (and that’s why we love it too).
 
@@ -79,12 +80,19 @@ Would you like to like to cotribute to Activity Log? You are more than welcome t
 
 == Changelog ==
 
+= 2.0.5 =
+* New! Register `aal_init_caps` filter.
+* Tweak! Change all methods to non-static.
+* Tweak! Some improved coding standards and PHPDoc.
+* Tweak! Split `AAL_Hooks` class to multiple classes.
+* New! Added translate: Armenia (hy_AM) - Thanks to Hayk Jomardyan.
+
 = 2.0.4 =
-* Tweak! don't allowed to access in direct files.
+* Tweak! Don't allowed to access in direct files.
 * New! Added translate: Danish (da_DK) - Thanks to [Morten Dalgaard Johansen](http://www.iosoftgame.com/)
 
 = 2.0.3 =
-* New! record when widgets change orders.
+* New! Record when widgets change orders.
 
 = 2.0.2 =
 * New! Save more Options:
