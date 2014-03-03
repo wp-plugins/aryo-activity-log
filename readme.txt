@@ -3,7 +3,7 @@ Contributors: KingYes, ariel.k, maor
 Tags: access, administration, activity, community, event, monitor, multisite, multi-users, log, logger, login, network, stats, security, tracking, madeinisrael, woocommerce
 Requires at least: 3.5
 Tested up to: 3.8.1
-Stable tag: 2.0.1
+Stable tag: 2.0.5
 License: GPLv2 or later
 
 Get aware of any activities that are taking place on your dashboard! Imagine it like a black-box for your WordPress site.
@@ -17,15 +17,20 @@ If you have tens of users or more, you really can’t know who did it. This plug
 
 <strong>As of this moment, the plugin logs things when:</strong><br />
 
-* <strong>Post, Page or any Custom Post Type</strong><br />Created, Updated, Status (draft, pending review, publish), Deleted.
-* <strong>Taxonomy</strong><br />Created, Edited, Deleted.
-* <strong>Media</strong><br />Uploaded, Edited, Deleted.
-* <strong>Users</strong><br />Login, Logout, Login has failed, Update profile, Registered and Deleted.
-* <strong>Plugins</strong><br />Activated, Deactivated, Changed.
-* <strong>Themes</strong><br />Activeted, Changed (Editor and Customizer).
-* <strong>Widgets</strong><br />Added to a sidebar / Deleted from a sidebar.
-* <strong>Menu</strong><br />A menu is being updated.
-* <strong>Setting (Options)</strong><br />A option is being updated (can be extend by east filter).
+* <strong>Posts</strong> - Created, Updated, Deleted.
+* <strong>Pages</strong> - Created, Updated, Deleted.
+* <strong>Custom Post Type</strong> - Created, Updated, Deleted.
+* <strong>Tags</strong> - Created, Edited, Deleted.
+* <strong>Categories</strong> - Created, Edited, Deleted.
+* <strong>Taxonomies</strong> - Created, Edited, Deleted.
+* <strong>Media</strong> - Uploaded, Edited, Deleted.
+* <strong>Users</strong> - Login, Logout, Login has failed, Update profile, Registered and Deleted.
+* <strong>Plugins</strong> - Activated, Deactivated, Changed.
+* <strong>Themes</strong> - Activeted, Changed (Editor and Customizer).
+* <strong>Widgets</strong> - Added to a sidebar / Deleted from a sidebar, Order widgets.
+* <strong>Menus</strong> - A menu is being updated.
+* <strong>Setting</strong> - General, Writing, Reading, Discussion, Media, Permalinks.
+* <strong>Options</strong> - Can be extend by east filter.
 * <strong>WooCommerce</strong> - Few options updated (will be more soon)
 * and much more..
 
@@ -38,7 +43,9 @@ If you have tens of users or more, you really can’t know who did it. This plug
 <h4>Translators:</h4>
 * German (de_DE) - [Robert Harm](http://www.mapsmarker.com/)
 * Serbo-Croatian (sr_RS) - [Borisa Djuraskovic](http://www.webhostinghub.com/)
-* Hebrew (he_IL) - [ARYO Digital](http://www.aryodigital.com/)
+* Danish (da_DK) - [Morten Dalgaard Johansen](http://www.iosoftgame.com/)
+* Hebrew (he_IL) + RTL Support - [ARYO Digital](http://www.aryodigital.com/)
+* Armenia (hy_AM) - Hayk Jomardyan
 
 The plugin does not require any kind of setup. It works out of the box (and that’s why we love it too).
 
@@ -73,6 +80,29 @@ Would you like to like to cotribute to Activity Log? You are more than welcome t
 
 == Changelog ==
 
+= 2.0.5 =
+* New! Register `aal_init_caps` filter.
+* Tweak! Change all methods to non-static.
+* Tweak! Some improved coding standards and PHPDoc.
+* Tweak! Split `AAL_Hooks` class to multiple classes.
+* New! Added translate: Armenia (hy_AM) - Thanks to Hayk Jomardyan.
+
+= 2.0.4 =
+* Tweak! Don't allowed to access in direct files.
+* New! Added translate: Danish (da_DK) - Thanks to [Morten Dalgaard Johansen](http://www.iosoftgame.com/)
+
+= 2.0.3 =
+* New! Record when widgets change orders.
+
+= 2.0.2 =
+* New! Save more Options:
+* General
+* Writing
+* Reading
+* Discussion
+* Media
+* Permalinks
+
 = 2.0.1 =
 * New! filter for disable erase all the log
 * Bugs fixed
@@ -85,7 +115,7 @@ Would you like to like to cotribute to Activity Log? You are more than welcome t
 * Added Avatar to author
 * Added role for author
 * Added log for activeted theme
-* Re-order Culomns
+* Re-order Culoumns
 * Compatible up to 3.8.1
 * Settings page is now accessible directly from Activity Log's menu
 * Keep your log for any time your wants

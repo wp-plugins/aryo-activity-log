@@ -14,7 +14,7 @@ class AAL_Settings {
 		add_action( 'admin_footer', array( &$this, 'admin_footer' ) );
 		add_filter( 'plugin_action_links_' . ACTIVITY_LOG_BASE, array( &$this, 'plugin_action_links' ) );
 
-		add_action( 'wp_ajax_aal_reset_stream', array( &$this, 'ajax_aal_reset_stream' ) );
+		add_action( 'wp_ajax_aal_reset_items', array( &$this, 'ajax_aal_reset_items' ) );
 	}
 	
 	public function plugin_action_links( $links ) {
@@ -86,8 +86,8 @@ class AAL_Settings {
 				'general_settings_section',
 				array(
 					'html' => sprintf( __( '<a href="%s" id="%s">Reset Database</a>', 'aryo-aal' ), add_query_arg( array(
-							'action' => 'aal_reset_stream',
-							'_nonce' => wp_create_nonce( 'aal_reset_stream' ),
+							'action' => 'aal_reset_items',
+							'_nonce' => wp_create_nonce( 'aal_reset_items' ),
 						), admin_url( 'admin-ajax.php' ) ), 'aal-delete-log-activities' ),
 					'desc' => __( 'Warning: Clicking this will delete all activities from the database.', 'aryo-aal' ),
 				)
@@ -141,12 +141,13 @@ class AAL_Settings {
 		<?php
 	}
 	
-	public function ajax_aal_reset_stream() {
-		if ( ! check_ajax_referer( 'aal_reset_stream', '_nonce', false ) || ! current_user_can( 'manage_options' ) ) {
+	public function ajax_aal_reset_items() {
+		if ( ! check_ajax_referer( 'aal_reset_items', '_nonce', false ) || ! current_user_can( 'manage_options' ) ) {
 			wp_die( 'You do not have sufficient permissions to access this page.', 'aryo-aal' );
 		}
 		
-		AAL_API::erase_all_items();
+		AAL_Main::instance()->api->erase_all_items();
+		
 		wp_redirect( add_query_arg( array(
 				'page' => 'activity-log-settings',
 				'message' => 'data_erased',
@@ -154,7 +155,7 @@ class AAL_Settings {
 		die();
 	}
 
-	public static function get_option( $key = '' ) {
+	public function get_option( $key = '' ) {
 		$settings = get_option( 'activity-log-settings' );
 		return ! empty( $settings[ $key ] ) ? $settings[ $key ] : false;
 	}
@@ -188,7 +189,7 @@ final class AAL_Settings_Fields {
 			return;
 		
 		?>
-		<input type="text" id="<?php echo esc_attr( $args['id'] ); ?>" name="<?php printf( '%s[%s]', esc_attr( $args['page'] ), esc_attr( $args['id'] ) ); ?>" value="<?php echo AAL_Settings::get_option( $args['id'] ); ?>" class="<?php echo implode( ' ', $args['classes'] ); ?>" />
+		<input type="text" id="<?php echo esc_attr( $args['id'] ); ?>" name="<?php printf( '%s[%s]', esc_attr( $args['page'] ), esc_attr( $args['id'] ) ); ?>" value="<?php echo AAL_Main::instance()->settings->get_option( $args['id'] ); ?>" class="<?php echo implode( ' ', $args['classes'] ); ?>" />
 		<?php
 	}
 	
@@ -203,7 +204,7 @@ final class AAL_Settings_Fields {
 			return;
 
 		?>
-		<input type="number" id="<?php echo esc_attr( $args['id'] ); ?>" name="<?php printf( '%s[%s]', esc_attr( $args['page'] ), esc_attr( $args['id'] ) ); ?>" value="<?php echo AAL_Settings::get_option( $args['id'] ); ?>" class="<?php echo implode( ' ', $args['classes'] ); ?>" min="<?php echo $args['min']; ?>" step="<?php echo $args['step']; ?>" />
+		<input type="number" id="<?php echo esc_attr( $args['id'] ); ?>" name="<?php printf( '%s[%s]', esc_attr( $args['page'] ), esc_attr( $args['id'] ) ); ?>" value="<?php echo AAL_Main::instance()->settings->get_option( $args['id'] ); ?>" class="<?php echo implode( ' ', $args['classes'] ); ?>" min="<?php echo $args['min']; ?>" step="<?php echo $args['step']; ?>" />
 		<?php if ( ! empty( $args['sub_desc'] ) ) echo $args['sub_desc']; ?>
 		<?php if ( ! empty( $args['desc'] ) ) : ?>
 			<p class="description"><?php echo $args['desc']; ?></p>
@@ -219,7 +220,7 @@ final class AAL_Settings_Fields {
 		?>
 		<select id="<?php echo esc_attr( $id ); ?>" name="<?php printf( '%s[%s]', esc_attr( $page ), esc_attr( $id ) ); ?>">
 			<?php foreach ( $options as $name => $label ) : ?>
-			<option value="<?php echo esc_attr( $name ); ?>" <?php selected( $name, (string) AAL_Settings::get_option( $id ) ); ?>>
+			<option value="<?php echo esc_attr( $name ); ?>" <?php selected( $name, (string) AAL_Main::instance()->settings->get_option( $id ) ); ?>>
 				<?php echo esc_html( $label ); ?>
 			</option>
 			<?php endforeach; ?>
