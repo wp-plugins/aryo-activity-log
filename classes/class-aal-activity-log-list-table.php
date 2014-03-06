@@ -71,15 +71,15 @@ class AAL_Activity_Log_List_Table extends WP_List_Table {
 			'edit_pages'     => array( 'Post', 'Taxonomy', 'Attachment' ),
 		) );
 
-		$this->_caps = array(
+		$this->_caps = apply_filters( 'aal_init_caps', array(
 			'administrator' => array( 'administrator', 'editor', 'author', 'guest' ),
 			'editor'        => array( 'editor', 'author', 'guest' ),
 			'author'        => array( 'author', 'guest' ),
-		);
+		) );
 
 		add_screen_option( 'per_page', array(
-			'default' => 20,
-			'label'   => __( 'Items', 'aryo-aal' ),
+			'default' => 50,
+			'label'   => __( 'Activities', 'aryo-aal' ),
 			'option'  => 'edit_aal_logs_per_page',
 		) );
 
@@ -177,6 +177,10 @@ class AAL_Activity_Log_List_Table extends WP_List_Table {
 			case 'Taxonomy' :
 				if ( ! empty( $item->object_id ) )
 					$return = sprintf( '<a href="%s">%s</a>', get_edit_term_link( $item->object_id, $item->object_subtype ), $item->object_name );
+				break;
+			
+			case 'Options' :
+				$return = __( $item->object_name, 'aryo-aal' );
 				break;
 		}
 		
