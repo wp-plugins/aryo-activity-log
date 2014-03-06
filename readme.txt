@@ -3,7 +3,7 @@ Contributors: KingYes, ariel.k, maor
 Tags: access, administration, activity, community, event, monitor, multisite, multi-users, log, logger, login, network, stats, security, tracking, madeinisrael, woocommerce
 Requires at least: 3.5
 Tested up to: 3.8.1
-Stable tag: 2.0.5
+Stable tag: 2.0.6
 License: GPLv2 or later
 
 Get aware of any activities that are taking place on your dashboard! Imagine it like a black-box for your WordPress site.
@@ -79,6 +79,9 @@ Would you like to like to cotribute to Activity Log? You are more than welcome t
 
 
 == Changelog ==
+
+= 2.0.6 =
+* Fixed! Random fatal error ([topic](https://github.com/KingYes/wordpress-aryo-activity-log/issues/32))
 
 = 2.0.5 =
 * New! Register `aal_init_caps` filter.
