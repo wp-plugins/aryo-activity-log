@@ -19,6 +19,8 @@ class AAL_Hooks {
 		include( plugin_dir_path( ACTIVITY_LOG__FILE__ ) . '/hooks/class-aal-hook-taxonomy.php' );
 		include( plugin_dir_path( ACTIVITY_LOG__FILE__ ) . '/hooks/class-aal-hook-theme.php' );
 		include( plugin_dir_path( ACTIVITY_LOG__FILE__ ) . '/hooks/class-aal-hook-widgets.php' );
+		include( plugin_dir_path( ACTIVITY_LOG__FILE__ ) . '/hooks/class-aal-hook-core.php' );
+		include( plugin_dir_path( ACTIVITY_LOG__FILE__ ) . '/hooks/class-aal-hook-comments.php' );
 		
 		new AAL_Hook_User();
 		new AAL_Hook_Attachment();
@@ -29,5 +31,7 @@ class AAL_Hooks {
 		new AAL_Hook_Taxonomy();
 		new AAL_Hook_Theme();
 		new AAL_Hook_Widgets();
+		new AAL_Hook_Core();
+		new AAL_Hook_Comments();
 	}
 }
