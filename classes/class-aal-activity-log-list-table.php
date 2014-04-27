@@ -66,9 +66,9 @@ class AAL_Activity_Log_List_Table extends WP_List_Table {
 		
 		$this->_roles = apply_filters( 'aal_init_roles', array(
 			// admin
-			'manage_options' => array( 'Post', 'Taxonomy', 'User', 'Options', 'Attachment', 'Plugin', 'Widget', 'Theme', 'Menu' ),
+			'manage_options' => array( 'Core', 'Post', 'Taxonomy', 'User', 'Options', 'Attachment', 'Plugin', 'Widget', 'Theme', 'Menu', 'Comments' ),
 			// editor
-			'edit_pages'     => array( 'Post', 'Taxonomy', 'Attachment' ),
+			'edit_pages'     => array( 'Post', 'Taxonomy', 'Attachment', 'Comments' ),
 		) );
 
 		$this->_caps = apply_filters( 'aal_init_caps', array(
@@ -179,7 +179,14 @@ class AAL_Activity_Log_List_Table extends WP_List_Table {
 					$return = sprintf( '<a href="%s">%s</a>', get_edit_term_link( $item->object_id, $item->object_subtype ), $item->object_name );
 				break;
 			
+			case 'Comments' :
+				if ( ! empty( $item->object_id ) && $comment = get_comment( $item->object_id ) ) {
+					$return = sprintf( '<a href="%s">%s #%d</a>', get_edit_comment_link( $item->object_id ), $item->object_name, $item->object_id );
+				}
+				break;
+
 			case 'Options' :
+			case 'Core' :
 				$return = __( $item->object_name, 'aryo-aal' );
 				break;
 		}

@@ -42,6 +42,21 @@ __( 'Menu', 'aryo-aal' );
 // Taxonomy
 __( 'Taxonomy', 'aryo-aal' );
 
+// Core
+__( 'Core', 'aryo-aal' );
+__( 'WordPress Updated', 'aryo-aal' );
+__( 'WordPress Auto Updated', 'aryo-aal' );
+
+// Comments
+__( 'Comments', 'aryo-aal' );
+__( 'pending', 'aryo-aal' );
+__( 'approved', 'aryo-aal' );
+__( 'unapproved', 'aryo-aal' );
+__( 'trashed', 'aryo-aal' );
+__( 'untrashed', 'aryo-aal' );
+__( 'spammed', 'aryo-aal' );
+__( 'unspammed', 'aryo-aal' );
+
 
 
 // Translate Options?
