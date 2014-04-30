@@ -3,7 +3,7 @@ Contributors: KingYes, ariel.k, maor
 Tags: access, administration, activity, community, event, monitor, multisite, multi-users, log, logger, audit log, login, network, stats, security, tracking, madeinisrael, woocommerce
 Requires at least: 3.5
 Tested up to: 3.9
-Stable tag: 2.1.1
+Stable tag: 2.1.2
 License: GPLv2 or later
 
 Get aware of any activities that are taking place on your dashboard! Imagine it like a black-box for your WordPress site.
@@ -82,6 +82,9 @@ Would you like to like to contribute to Activity Log? You are more than welcome 
 
 
 == Changelog ==
+
+= 2.1.2 =
+* Tweak! Update translate: Hebrew (he_IL)
 
 = 2.1.1 =
 * New! Track about WordPress core update (manual or auto-updated) ([#41](https://github.com/KingYes/wordpress-aryo-activity-log/issues/41))
