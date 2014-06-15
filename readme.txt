@@ -3,7 +3,7 @@ Contributors: KingYes, ariel.k, maor
 Tags: access, administration, activity, community, event, monitor, multisite, multi-users, log, logger, audit log, login, network, stats, security, tracking, madeinisrael, woocommerce
 Requires at least: 3.5
 Tested up to: 3.9
-Stable tag: 2.1.2
+Stable tag: 2.1.3
 License: GPLv2 or later
 
 Get aware of any activities that are taking place on your dashboard! Imagine it like a black-box for your WordPress site.
@@ -17,34 +17,35 @@ If you have tens of users or more, you really can’t know who did it. This plug
 
 <strong>As of this moment, the plugin logs things when:</strong><br />
 
-* <strong>Posts</strong> - Created, Updated, Deleted.
-* <strong>Pages</strong> - Created, Updated, Deleted.
-* <strong>Custom Post Type</strong> - Created, Updated, Deleted.
-* <strong>Tags</strong> - Created, Edited, Deleted.
-* <strong>Categories</strong> - Created, Edited, Deleted.
-* <strong>Taxonomies</strong> - Created, Edited, Deleted.
-* <strong>Comments</strong> - Created, Approved, Unproved, Trashed, Untrashed, Spammed, Unspammed, Deleted.
-* <strong>Media</strong> - Uploaded, Edited, Deleted.
-* <strong>Users</strong> - Login, Logout, Login has failed, Update profile, Registered and Deleted.
-* <strong>Plugins</strong> - Activated, Deactivated, Changed.
-* <strong>Themes</strong> - Activeted, Changed (Editor and Customizer).
-* <strong>Widgets</strong> - Added to a sidebar / Deleted from a sidebar, Order widgets.
-* <strong>Menus</strong> - A menu is being updated.
-* <strong>Setting</strong> - General, Writing, Reading, Discussion, Media, Permalinks.
-* <strong>Options</strong> - Can be extend by east filter.
+* <strong>WordPress</strong> - Core Updates
+* <strong>Posts</strong> - Created, Updated, Deleted
+* <strong>Pages</strong> - Created, Updated, Deleted
+* <strong>Custom Post Type</strong> - Created, Updated, Deleted
+* <strong>Tags</strong> - Created, Edited, Deleted
+* <strong>Categories</strong> - Created, Edited, Deleted
+* <strong>Taxonomies</strong> - Created, Edited, Deleted
+* <strong>Comments</strong> - Created, Approved, Unproved, Trashed, Untrashed, Spammed, Unspammed, Deleted
+* <strong>Media</strong> - Uploaded, Edited, Deleted
+* <strong>Users</strong> - Login, Logout, Login has failed, Update profile, Registered and Deleted
+* <strong>Plugins</strong> - Activated, Deactivated, Changed
+* <strong>Themes</strong> - Activeted, Changed (Editor and Customizer)
+* <strong>Widgets</strong> - Added to a sidebar / Deleted from a sidebar, Order widgets
+* <strong>Menus</strong> - A menu is being updated
+* <strong>Setting</strong> - General, Writing, Reading, Discussion, Media, Permalinks
+* <strong>Options</strong> - Can be extend by east filter
 * <strong>WooCommerce</strong> - Few options updated (will be more soon)
-* <strong>WordPress</strong> - Core Updates.
-* and much more..
+* <strong>bbPress</strong> - Forums, Topics, Replies, Taxonomies and other actions
+* and much more...
 
 <h4>What people are saying</h4>
 * <em>“Thanks to this step, we’ve discovered that our site was undergoing a brute force attack”</em> - [artdriver.com](http://www.artdriver.com/wordpress-site-hacked-solution-time/)
 * <em>“Optimized code - The plugin itself is blazing fast and leaves almost no footprint on the server.”</em> - [freshtechtips.com](http://www.freshtechtips.com/2014/01/best-audit-trail-plugins-for-wordpress.html)
 * <em>“The plugin successful for activity log for WordPress.”</em> - [wp-tricks.co.il](http://www.wp-tricks.co.il/2013/08/%D7%99%D7%95%D7%9E%D7%9F-%D7%A4%D7%A2%D7%99%D7%9C%D7%95%D7%AA-%D7%9C%D7%95%D7%95%D7%A8%D7%93%D7%A4%D7%A8%D7%A1-aryo-activity-log/)
 * <em>“This is a pretty simple yet quite effective plugin for keeping track of what your admins and users do on your sites.”</em> - [shadowdragonunlimited.com](http://shadowdragonunlimited.com/plugin-of-the-week-9302013-aryo-activity-log/plugin-of-the-week/)
-* Thanks
 
 <h4>Translators:</h4>
 * German (de_DE) - [Robert Harm](http://www.mapsmarker.com/)
+* Dutch (nl_NL) - [Tom Aalbers](http://securancy.com/)
 * Serbo-Croatian (sr_RS) - [Borisa Djuraskovic](http://www.webhostinghub.com/)
 * Danish (da_DK) - [Morten Dalgaard Johansen](http://www.iosoftgame.com/)
 * Hebrew (he_IL) + RTL Support - [Aryo Digital](http://www.aryodigital.com/)
@@ -82,6 +83,9 @@ Would you like to like to contribute to Activity Log? You are more than welcome 
 
 
 == Changelog ==
+
+= 2.1.3 =
+* New! Added translate: Dutch (nl_NL) - Thanks to [Tom Aalbers](http://securancy.com/) ([#55](https://github.com/KingYes/wordpress-aryo-activity-log/issues/55))
 
 = 2.1.2 =
 * Tweak! Update translate: Hebrew (he_IL)
