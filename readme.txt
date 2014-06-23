@@ -3,7 +3,7 @@ Contributors: KingYes, ariel.k, maor
 Tags: access, administration, activity, community, event, monitor, multisite, multi-users, log, logger, audit log, login, network, stats, security, tracking, madeinisrael, woocommerce
 Requires at least: 3.5
 Tested up to: 3.9
-Stable tag: 2.1.3
+Stable tag: 2.1.4
 License: GPLv2 or later
 
 Get aware of any activities that are taking place on your dashboard! Imagine it like a black-box for your WordPress site.
@@ -83,6 +83,9 @@ Would you like to like to contribute to Activity Log? You are more than welcome 
 
 
 == Changelog ==
+
+= 2.1.4 =
+* Fixed! Store real IP address in Proxy too ([#53](https://github.com/KingYes/wordpress-aryo-activity-log/issues/53))
 
 = 2.1.3 =
 * New! Added translate: Dutch (nl_NL) - Thanks to [Tom Aalbers](http://securancy.com/) ([#55](https://github.com/KingYes/wordpress-aryo-activity-log/issues/55))

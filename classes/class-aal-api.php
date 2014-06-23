@@ -16,12 +16,42 @@ class AAL_API {
 		if ( empty( $logs_lifespan ) )
 			return;
 		
-		$wpdb->query( $wpdb->prepare(
-			'DELETE FROM `%1$s`
-				WHERE `hist_time` < %2$d',
-			$wpdb->activity_log,
-			strtotime( '-' . $logs_lifespan . ' days', current_time( 'timestamp' ) )
-		) );
+		$wpdb->query(
+			$wpdb->prepare(
+				'DELETE FROM `%1$s`
+					WHERE `hist_time` < %2$d',
+				$wpdb->activity_log,
+				strtotime( '-' . $logs_lifespan . ' days', current_time( 'timestamp' ) )
+			)
+		);
+	}
+
+	/**
+	 * Get real address
+	 * 
+	 * @since 2.1.4
+	 * 
+	 * @return string real address IP
+	 */
+	protected function _get_ip_address() {
+		$server_ip_keys = array(
+			'HTTP_CLIENT_IP',
+			'HTTP_X_FORWARDED_FOR',
+			'HTTP_X_FORWARDED',
+			'HTTP_X_CLUSTER_CLIENT_IP',
+			'HTTP_FORWARDED_FOR',
+			'HTTP_FORWARDED',
+			'REMOTE_ADDR',
+		);
+		
+		foreach ( $server_ip_keys as $key ) {
+			if ( isset( $_SERVER[ $key ] ) ) {
+				return $_SERVER[ $key ];
+			}
+		}
+		
+		// Fallback local ip.
+		return '127.0.0.1';
 	}
 
 	/**
@@ -31,10 +61,12 @@ class AAL_API {
 	public function erase_all_items() {
 		global $wpdb;
 		
-		$wpdb->query( $wpdb->prepare(
-			'TRUNCATE %1$s',
-			$wpdb->activity_log
-		) );
+		$wpdb->query(
+			$wpdb->prepare(
+				'TRUNCATE %1$s',
+				$wpdb->activity_log
+			)
+		);
 	}
 
 	/**
@@ -52,7 +84,7 @@ class AAL_API {
 			'object_subtype' => '',
 			'object_name'    => '',
 			'object_id'      => '',
-			'hist_ip'        => $_SERVER['REMOTE_ADDR'],
+			'hist_ip'        => $this->_get_ip_address(),
 			'hist_time'      => current_time( 'timestamp' ),
 		) );
 
@@ -60,11 +92,11 @@ class AAL_API {
 		if ( $user ) {
 			$args['user_caps'] = strtolower( key( $user->caps ) );
 			if ( empty( $args['user_id'] ) )
-				$args['user_id']  = $user->ID;
+				$args['user_id'] = $user->ID;
 		} else {
 			$args['user_caps'] = 'guest';
 			if ( empty( $args['user_id'] ) )
-				$args['user_id']  = 0;
+				$args['user_id'] = 0;
 		}
 		
 		// TODO: Find better way to Multisite compatibility.
@@ -72,32 +104,35 @@ class AAL_API {
 			$args['user_caps'] = 'administrator';
 		
 		// Make sure for non duplicate.
-		$check_duplicate = $wpdb->get_row( $wpdb->prepare(
-			'SELECT `histid` FROM %1$s
-				WHERE `user_caps` = \'%2$s\'
-					AND `action` = \'%3$s\'
-					AND `object_type` = \'%4$s\'
-					AND `object_subtype` = \'%5$s\'
-					AND `object_name` = \'%6$s\'
-					AND `user_id` = \'%7$s\'
-					AND `hist_ip` = \'%8$s\'
-					AND `hist_time` = \'%9$s\'
-			;',
-			$wpdb->activity_log,
-			$args['user_caps'],
-			$args['action'],
-			$args['object_type'],
-			$args['object_subtype'],
-			$args['object_name'],
-			$args['user_id'],
-			$args['hist_ip'],
-			$args['hist_time']
-		) );
+		$check_duplicate = $wpdb->get_row(
+			$wpdb->prepare(
+				'SELECT `histid` FROM %1$s
+					WHERE `user_caps` = \'%2$s\'
+						AND `action` = \'%3$s\'
+						AND `object_type` = \'%4$s\'
+						AND `object_subtype` = \'%5$s\'
+						AND `object_name` = \'%6$s\'
+						AND `user_id` = \'%7$s\'
+						AND `hist_ip` = \'%8$s\'
+						AND `hist_time` = \'%9$s\'
+				;',
+				$wpdb->activity_log,
+				$args['user_caps'],
+				$args['action'],
+				$args['object_type'],
+				$args['object_subtype'],
+				$args['object_name'],
+				$args['user_id'],
+				$args['hist_ip'],
+				$args['hist_time']
+			)
+		);
 		
 		if ( $check_duplicate )
 			return;
 
-		$wpdb->insert( $wpdb->activity_log,
+		$wpdb->insert(
+			$wpdb->activity_log,
 			array(
 				'action'         => $args['action'],
 				'object_type'    => $args['object_type'],
@@ -109,7 +144,7 @@ class AAL_API {
 				'hist_ip'        => $args['hist_ip'],
 				'hist_time'      => $args['hist_time'],
 			),
-			array( "%s", "%s", "%s", "%s", "%d", "%d", "%s", "%s", "%d" )
+			array( '%s', '%s', '%s', '%s', '%d', '%d', '%s', '%s', '%d' )
 		);
 
 		// Remove old items.
