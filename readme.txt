@@ -1,6 +1,6 @@
 === ARYO Activity Log ===
 Contributors: KingYes, ariel.k, maor
-Tags: access, administration, activity, community, event, monitor, multisite, multi-users, log, logger, audit log, login, network, stats, security, tracking, madeinisrael, woocommerce
+Tags: access, administration, activity, community, event, monitor, multisite, multi-users, log, logger, audit log, login, network, stats, security, tracking, madeinisrael, woocommerce, notifications, email notifications
 Requires at least: 3.5
 Tested up to: 3.9
 Stable tag: 2.1.4
@@ -36,6 +36,8 @@ If you have tens of users or more, you really can’t know who did it. This plug
 * <strong>WooCommerce</strong> - Few options updated (will be more soon)
 * <strong>bbPress</strong> - Forums, Topics, Replies, Taxonomies and other actions
 * and much more...
+
+<strong>New!</strong> You are now able to get email notifications once an event you have defined (via rules) has occured. This is useful in cases you must know right away when someone does something on your site.
 
 <h4>What people are saying</h4>
 * <em>“Thanks to this step, we’ve discovered that our site was undergoing a brute force attack”</em> - [artdriver.com](http://www.artdriver.com/wordpress-site-hacked-solution-time/)
