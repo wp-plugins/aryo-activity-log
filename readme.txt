@@ -2,8 +2,8 @@
 Contributors: pojo.me, KingYes, ariel.k, maor
 Tags: administration, activity, event, monitor, multisite, multi-users, log, logger, audit log, stats, security, tracking, woocommerce, notifications, email notifications
 Requires at least: 3.5
-Tested up to: 4.1
-Stable tag: 2.1.15
+Tested up to: 4.2
+Stable tag: 2.1.16
 License: GPLv2 or later
 
 Get aware of any activities that are taking place on your dashboard! Imagine it like a black-box for your WordPress site.
@@ -52,11 +52,12 @@ If you have tens of users or more, you really can’t know who did it. This plug
 * Dutch (nl_NL) - [Tom Aalbers](http://securancy.com/)
 * Serbo-Croatian (sr_RS) - [Borisa Djuraskovic](http://www.webhostinghub.com/)
 * Danish (da_DK) - [Morten Dalgaard Johansen](http://www.iosoftgame.com/)
-* Hebrew (he_IL) + RTL Support - [Aryo Digital](http://www.aryodigital.com/)
+* Hebrew (he_IL) + RTL Support - [Pojo.me](http://pojo.me/)
 * Armenia (hy_AM) - Hayk Jomardyan
 * Brazilian Portuguese (pt_BR) - [Criação de Sites](http://www.techload.com.br/criacao-de-sites-ribeirao-preto)
 * Turkish (tr_TR) - [Ahmet Kolcu](http://ahmetkolcu.org)
 * Persian (fa_IR) - [Promising](http://vwp.ir/)
+* Russian (ru_RU) - Oleg Reznikov
 
 The plugin does not require any kind of setup. It works out of the box (and that’s why we love it too).
 
@@ -91,6 +92,11 @@ Would you like to like to contribute to Activity Log? You are more than welcome 
 
 
 == Changelog ==
+
+= 2.1.16 =
+* New! Added translate: Russian (ru_RU) - Thanks to Oleg Reznikov
+* Fixes Undefined property with some 3td party themes/plugins
+* Tested up to WordPress v4.2
 
 = 2.1.15 =
 * Tested up to WordPress v4.1
