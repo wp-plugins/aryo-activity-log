@@ -3,7 +3,7 @@ Contributors: pojo.me, KingYes, ariel.k, maor
 Tags: administration, activity, event, monitor, multisite, multi-users, log, logger, audit log, stats, security, tracking, woocommerce, notifications, email notifications
 Requires at least: 3.5
 Tested up to: 4.2
-Stable tag: 2.2.3
+Stable tag: 2.2.4
 License: GPLv2 or later
 
 Get aware of any activities that are taking place on your dashboard! Imagine it like a black-box for your WordPress site.
@@ -59,6 +59,7 @@ If you have tens of users or more, you really can’t know who did it. This plug
 * Persian (fa_IR) - [Promising](http://vwp.ir/)
 * Russian (ru_RU) - Oleg Reznikov
 * Polish (pl_PL) - Maciej Gryniuk
+* Czech (cs_CZ) - Martin Kokeš
 
 The plugin does not require any kind of setup. It works out of the box (and that’s why we love it too).
 
@@ -93,6 +94,9 @@ Would you like to like to contribute to Activity Log? You are more than welcome 
 
 
 == Changelog ==
+
+= 2.2.4 =
+* New! - Added translate: Czech (cs_CZ) - Thanks to Martin Kokeš ([#76](https://github.com/KingYes/wordpress-aryo-activity-log/pull/76))
 
 = 2.2.3 =
 * Tweak! - Added more filters in table list columns

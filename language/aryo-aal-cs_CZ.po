@@ -1,133 +1,130 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: aryo-activity-log 2.2.4\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-06 18:44+0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"POT-Creation-Date: 2015-07-12 16:14+0300\n"
+"PO-Revision-Date: 2015-08-04 13:58+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: cs_CZ\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.5\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: aryo-activity-log.php:110 aryo-activity-log.php:121
 msgid "Cheatin&#8217; huh?"
-msgstr ""
+msgstr "No tak, vy podvádíte?"
 
 #: classes/class-aal-activity-log-list-table.php:100
 msgid "Activities"
-msgstr ""
+msgstr "Aktivity"
 
 #: classes/class-aal-activity-log-list-table.php:111
 msgid "Date"
-msgstr ""
+msgstr "Datum"
 
 #: classes/class-aal-activity-log-list-table.php:112
 msgid "Author"
-msgstr ""
+msgstr "Autor"
 
 #: classes/class-aal-activity-log-list-table.php:113
 msgid "IP"
-msgstr ""
+msgstr "IP"
 
 #: classes/class-aal-activity-log-list-table.php:114
 msgid "Type"
-msgstr ""
+msgstr "Typ"
 
 #: classes/class-aal-activity-log-list-table.php:115
 msgid "Label"
-msgstr ""
+msgstr "Označení"
 
 #: classes/class-aal-activity-log-list-table.php:116
 msgid "Action"
-msgstr ""
+msgstr "Akce"
 
 #: classes/class-aal-activity-log-list-table.php:117
 msgid "Description"
-msgstr ""
+msgstr "Popis"
 
 #: classes/class-aal-activity-log-list-table.php:137
 #, php-format
 msgid "%s ago"
-msgstr ""
+msgstr "%s nazpět"
 
 #: classes/class-aal-activity-log-list-table.php:166
 msgid "Unknown"
-msgstr ""
+msgstr "Neznámý"
 
 #: classes/class-aal-activity-log-list-table.php:172
 #: classes/class-aal-activity-log-list-table.php:291
 msgid "Guest"
-msgstr ""
+msgstr "Host"
 
 #: classes/class-aal-activity-log-list-table.php:215
 msgid "All"
-msgstr ""
+msgstr "Vše"
 
 #: classes/class-aal-activity-log-list-table.php:235
 msgid "Search"
-msgstr ""
+msgstr "Hledat"
 
 #: classes/class-aal-activity-log-list-table.php:278
 msgid "All Roles"
-msgstr ""
+msgstr "Všechny role"
 
 #: classes/class-aal-activity-log-list-table.php:302
 msgid "All Users"
-msgstr ""
+msgstr "Všichni uživatelé"
 
 #: classes/class-aal-activity-log-list-table.php:330
 msgid "All Types"
-msgstr ""
+msgstr "Všechny typy"
 
 #: classes/class-aal-activity-log-list-table.php:356
 msgid "All Actions"
-msgstr ""
+msgstr "Všechny akce"
 
 #: classes/class-aal-activity-log-list-table.php:367
 msgid "All Time"
-msgstr ""
+msgstr "Od počátku"
 
 #: classes/class-aal-activity-log-list-table.php:368
 msgid "Today"
-msgstr ""
+msgstr "Dnes"
 
 #: classes/class-aal-activity-log-list-table.php:369
 msgid "Yesterday"
-msgstr ""
+msgstr "Včera"
 
 #: classes/class-aal-activity-log-list-table.php:370
 msgid "Week"
-msgstr ""
+msgstr "Týden"
 
 #: classes/class-aal-activity-log-list-table.php:371
 msgid "Month"
-msgstr ""
+msgstr "Měsíc"
 
 #: classes/class-aal-activity-log-list-table.php:378
 msgid "Filter"
-msgstr ""
+msgstr "Filtrovat"
 
 #: classes/class-aal-admin-ui.php:16 classes/class-aal-admin-ui.php:26
 #: language/strings.php:5
 msgid "Activity Log"
-msgstr ""
+msgstr "Protokol změn"
 
 #: classes/class-aal-help.php:20
 msgid "Overview"
-msgstr ""
+msgstr "Přehled"
 
 #: classes/class-aal-help.php:23 classes/class-aal-settings.php:125
 #: classes/class-aal-settings.php:197
 msgid "Notifications"
-msgstr ""
+msgstr "Upozornění"
 
 #: classes/class-aal-help.php:24
 msgid ""
@@ -145,120 +142,125 @@ msgstr ""
 
 #: classes/class-aal-settings.php:26
 msgid "GitHub"
-msgstr ""
+msgstr "GitHub"
 
 #: classes/class-aal-settings.php:29 classes/class-aal-settings.php:44
 msgid "Settings"
-msgstr ""
+msgstr "Nastavení"
 
 #: classes/class-aal-settings.php:43 classes/class-aal-settings.php:227
 msgid "Activity Log Settings"
-msgstr ""
+msgstr "Nastavení protokolu změn"
 
 #: classes/class-aal-settings.php:82
 msgid "Display Options"
-msgstr ""
+msgstr "Možnosti zobrazení"
 
 #: classes/class-aal-settings.php:89
 msgid "Keep logs for"
-msgstr ""
+msgstr "Uchovat protokoly na"
 
 #: classes/class-aal-settings.php:98
 msgid "days."
-msgstr ""
+msgstr "dnů."
 
 #: classes/class-aal-settings.php:99 classes/class-aal-settings.php:139
 msgid ""
 "Maximum number of days to keep activity log. Leave blank to keep activity "
 "log forever (not recommended)."
 msgstr ""
+"Maximální počet dnů uchování protokolu změn. Ponechejte prázdné pro uchování "
+"protokolu změn nadobro (není doporučeno)."
 
 #: classes/class-aal-settings.php:106
 msgid "Delete Log Activities"
-msgstr ""
+msgstr "Odstranit protokol změn"
 
 #: classes/class-aal-settings.php:111
 #, php-format
 msgid "<a href=\"%s\" id=\"%s\">Reset Database</a>"
-msgstr ""
+msgstr "<a href=\"%s\" id=\"%s\">Obnovit databázi</a>"
 
 #: classes/class-aal-settings.php:115
 msgid "Warning: Clicking this will delete all activities from the database."
 msgstr ""
+"Upozornění: Klepnutím na toto tlačítko odstraníte všechny změny z databáze."
 
 #: classes/class-aal-settings.php:132
 msgid "Notification Events"
-msgstr ""
+msgstr "Oznámení událostí"
 
 #: classes/class-aal-settings.php:160
 msgid "Enable?"
-msgstr ""
+msgstr "Povolit?"
 
 #: classes/class-aal-settings.php:196
 msgid "General"
-msgstr ""
+msgstr "Všeobecné"
 
 #: classes/class-aal-settings.php:246
 msgid "All activities have been successfully deleted."
-msgstr ""
+msgstr "Všechny změny byly úspěšně odstraněny."
 
 #: classes/class-aal-settings.php:257
 msgid "Are you sure you want to do this action?"
-msgstr ""
+msgstr "Jste si jisti, že chcete provést tuto akci?"
 
 #: classes/class-aal-settings.php:268
 msgid "You do not have sufficient permissions to access this page."
-msgstr ""
+msgstr "Nemáte dostatečná oprávnění pro přístup na tuto stránku."
 
 #: classes/class-aal-settings.php:321
 msgid "These are some basic settings for Activity Log."
-msgstr ""
+msgstr "Toto jsou některá základní nastavení Protokolu změn."
 
 #: classes/class-aal-settings.php:327
 msgid ""
 "Serve yourself with custom-tailored notifications. First, define your "
 "conditions. Then, choose how the notifications will be sent."
 msgstr ""
+"Poslužte si oznámeními na míru. Nejprve definujte své podmínky. Pak vyberte, "
+"jak budou oznámení odeslána."
 
 #: classes/class-aal-settings.php:426
 msgid "Yes"
-msgstr ""
+msgstr "Ano"
 
 #: classes/class-aal-settings.php:427
 msgid "No"
-msgstr ""
+msgstr "Ne"
 
 #: classes/class-aal-settings.php:444 language/strings.php:22
 #: notifications/abstract-class-aal-notification-base.php:98
 msgid "User"
-msgstr ""
+msgstr "Uživatel"
 
 #: classes/class-aal-settings.php:445
 #: notifications/abstract-class-aal-notification-base.php:101
 msgid "Action Type"
-msgstr ""
+msgstr "Typ akce"
 
 #: classes/class-aal-settings.php:446
 msgid "Action Performed"
-msgstr ""
+msgstr "Provedená akce"
 
 #: classes/class-aal-settings.php:450
 msgid "equals to"
-msgstr ""
+msgstr "rovná se"
 
 #: classes/class-aal-settings.php:451
 msgid "not equals to"
-msgstr ""
+msgstr "nerovná se"
 
 #: classes/class-aal-settings.php:461
 msgid ""
 "A notification will be sent upon a successful match with the following "
 "conditions:"
-msgstr ""
+msgstr "Oznámení bude odesláno v případě úspěšné shody s těmito podmínkami:"
 
-#: hooks/class-aal-hook-posts.php:10
+#: hooks/class-aal-hook-posts.php:9
 msgid "(no title)"
-msgstr ""
+msgstr "(bez názvu)"
 
 #: language/strings.php:6
 msgid ""
@@ -269,123 +271,123 @@ msgstr ""
 
 #: language/strings.php:8
 msgid "Administrator"
-msgstr ""
+msgstr "Správce"
 
 #: language/strings.php:9
 msgid "Editor"
-msgstr ""
+msgstr "Editor"
 
 #: language/strings.php:12
 msgid "Post"
-msgstr ""
+msgstr "Příspěvek"
 
 #: language/strings.php:13
 msgid "created"
-msgstr ""
+msgstr "vytvořen"
 
 #: language/strings.php:14
 msgid "updated"
-msgstr ""
+msgstr "aktualizován"
 
 #: language/strings.php:15
 msgid "deleted"
-msgstr ""
+msgstr "odstraněn"
 
 #: language/strings.php:18
 msgid "Attachment"
-msgstr ""
+msgstr "Příloha"
 
 #: language/strings.php:19
 msgid "added"
-msgstr ""
+msgstr "přidána"
 
 #: language/strings.php:23
 msgid "logged_out"
-msgstr ""
+msgstr "přihlášen"
 
 #: language/strings.php:24
 msgid "logged_in"
-msgstr ""
+msgstr "odhlášen"
 
 #: language/strings.php:25
 msgid "wrong_password"
-msgstr ""
+msgstr "špatné_heslo"
 
 #: language/strings.php:28
 msgid "Plugin"
-msgstr ""
+msgstr "Plugin"
 
 #: language/strings.php:29
 msgid "activated"
-msgstr ""
+msgstr "aktivován"
 
 #: language/strings.php:30
 msgid "deactivated"
-msgstr ""
+msgstr "deaktivován"
 
 #: language/strings.php:31
 msgid "installed"
-msgstr ""
+msgstr "nainstalován"
 
 #: language/strings.php:34
 msgid "Theme"
-msgstr ""
+msgstr "Téma"
 
 #: language/strings.php:35
 msgid "Theme Customizer"
-msgstr ""
+msgstr "Přizpůsobení tématu"
 
 #: language/strings.php:38
 msgid "Widget"
-msgstr ""
+msgstr "Widget"
 
 #: language/strings.php:41
 msgid "Options"
-msgstr ""
+msgstr "Nastavení"
 
 #: language/strings.php:44
 msgid "Menu"
-msgstr ""
+msgstr "Menu"
 
 #: language/strings.php:47
 msgid "Taxonomy"
-msgstr ""
+msgstr "Taxonomie"
 
 #: language/strings.php:50
 msgid "Core"
-msgstr ""
+msgstr "Jádro"
 
 #: language/strings.php:51
 msgid "WordPress Updated"
-msgstr ""
+msgstr "WordPress aktualizován"
 
 #: language/strings.php:52
 msgid "WordPress Auto Updated"
-msgstr ""
+msgstr "WordPress automaticky aktualizován"
 
 #: language/strings.php:55
 msgid "Comments"
-msgstr ""
+msgstr "Komentáře"
 
 #: language/strings.php:56
 msgid "pending"
-msgstr ""
+msgstr "čekající"
 
 #: language/strings.php:57
 msgid "approved"
-msgstr ""
+msgstr "schválen"
 
 #: language/strings.php:58
 msgid "unapproved"
-msgstr ""
+msgstr "neschválen"
 
 #: language/strings.php:59
 msgid "trashed"
-msgstr ""
+msgstr "odstraněn"
 
 #: language/strings.php:60
 msgid "untrashed"
-msgstr ""
+msgstr "obnoven"
 
 #: language/strings.php:61
 msgid "spammed"
@@ -641,7 +643,7 @@ msgstr ""
 
 #: language/strings.php:140
 msgid "Export"
-msgstr ""
+msgstr "Exportovat"
 
 #: language/strings.php:141
 msgid "downloaded"
@@ -649,31 +651,31 @@ msgstr ""
 
 #: notifications/abstract-class-aal-notification-base.php:99
 msgid "Object Type"
-msgstr ""
+msgstr "Typ objektu"
 
 #: notifications/abstract-class-aal-notification-base.php:100
 msgid "Object Name"
-msgstr ""
+msgstr "Název objektu"
 
 #: notifications/abstract-class-aal-notification-base.php:102
 msgid "IP Address"
-msgstr ""
+msgstr "IP adresa"
 
 #: notifications/abstract-class-aal-notification-base.php:121
 msgid "N/A"
-msgstr ""
+msgstr "N/A"
 
 #: notifications/class-aal-notification-email.php:15
 msgid "Email"
-msgstr ""
+msgstr "E-mail"
 
 #: notifications/class-aal-notification-email.php:16
 msgid "Get notified by Email."
-msgstr ""
+msgstr "Získejte oznámení prostřednictvím e-mailu."
 
 #: notifications/class-aal-notification-email.php:49
 msgid "New notification from Activity Log"
-msgstr ""
+msgstr "Nové oznámení od Protokolu změn"
 
 #: notifications/class-aal-notification-email.php:65
 msgid ""
@@ -688,25 +690,25 @@ msgstr ""
 
 #: notifications/class-aal-notification-email.php:67
 msgid "From Email"
-msgstr ""
+msgstr "E-mail odesílatele"
 
 #: notifications/class-aal-notification-email.php:67
 msgid "The source Email address"
-msgstr ""
+msgstr "E-mailová adresa odesílatele"
 
 #: notifications/class-aal-notification-email.php:68
 msgid "To Email"
-msgstr ""
+msgstr "E-mail příjemce"
 
 #: notifications/class-aal-notification-email.php:68
 msgid "The Email address notifications will be sent to"
-msgstr ""
+msgstr "E-mailová adresa pro zaslání oznámení"
 
 #: notifications/class-aal-notification-email.php:69
 msgid "Message"
-msgstr ""
+msgstr "Zpráva"
 
 #: notifications/class-aal-notification-email.php:69
 #, php-format
 msgid "Customize the message using the following placeholders: %s"
-msgstr ""
+msgstr "Upravte zprávu pomocí následujících zástupných znaků: %s"
