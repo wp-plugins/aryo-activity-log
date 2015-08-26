@@ -59,34 +59,51 @@ class AAL_Notifications {
 	}
 
 	public function get_object_types() {
-		// TODO: include filter?
-		$opts = array(
-			'Attachment',
-			'Menu',
-			'Options',
-			'Plugin',
-			'Post',
-			'Taxonomy',
-			'Theme',
-			'User',
-			'Widget',
+		// TODO: It's need to be integration from the plugin
+		$opts = apply_filters(
+			'aal_notification_get_object_types',
+			array(
+				'Core',
+				'Export',
+				'Post',
+				'Taxonomy',
+				'User',
+				'Options',
+				'Attachment',
+				'Plugin',
+				'Widget',
+				'Theme',
+				'Menu',
+				'Comments',
+			)
 		);
+		
 		return array_combine( $opts, $opts );
 	}
 
 	public function get_actions() {
-		$opts = array(
-			'created',
-			'deleted',
-			'updated',
-			'added',
-			'activated',
-			'deactivated',
-			'accessed',
-			'file_updated',
-			'logged_in',
-			'logged_out',
-			'wrong_password',
+		// TODO: It's need to be integration from the plugin
+		$opts = apply_filters(
+			'aal_notification_get_actions',
+			array(
+				'created',
+				'deleted',
+				'updated',
+				'trashed',
+				'untrashed',
+				'spammed',
+				'unspammed',
+				'downloaded',
+				'installed',
+				'added',
+				'activated',
+				'deactivated',
+				'accessed',
+				'file_updated',
+				'logged_in',
+				'logged_out',
+				'wrong_password',
+			)
 		);
 		$ready = array();
 
